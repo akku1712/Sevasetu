@@ -1,0 +1,350 @@
+:root {
+  --primary: #349a6a;
+  --accent: #fd7e14;
+  --bg: #fafafa;
+  --white: #fff;
+  --gray: #777;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: var(--bg);
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Top Right Fixed Action Buttons */
+.nav-actions {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1100;
+}
+.action-btn {
+  padding: 0.5em 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background: var(--bg);
+  color: var(--primary);
+  transition: background 0.2s, color 0.2s;
+}
+.action-btn.donate {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+}
+.action-btn.donate:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+.action-btn:hover {
+  background: #e0f7ee;
+}
+
+/* HEADER */
+header {
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1rem 2%;
+}
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  gap: 10px;
+}
+.logo img {
+  height: 48px;
+  width: auto;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.tagline {
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 400;
+  margin-top: -4px;
+}
+nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: var(--primary);
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(52,154,106,0.13),rgba(253,126,20,0.04)), url('https://via.placeholder.com/1200x350?text=SevaSetu+Hero+Image') center/cover;
+  padding: 4rem 2% 3.5rem 2%;
+  text-align: center;
+  color: #204f3c;
+}
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1.2px;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+.hero .cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.hero .cta-group button {
+  font-size: 1.1rem;
+  padding: 0.8em 2.4em;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 2%;
+}
+section h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 8px;
+}
+.impact-cards, .work-cards, .news-items {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.impact-card, .work-card, .news-card {
+  flex: 1 1 220px;
+  min-width: 200px;
+  background: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(52,154,106,0.05);
+  padding: 1.3rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.impact-card strong {
+  font-size: 1.5rem;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.15em;
+}
+.work-card img,
+.involve-card img,
+.news-card img {
+  border-radius: 8px;
+}
+.work-card img { width: 100px; margin-bottom: 0.6rem; }
+.news-card img { width: 100%; margin-bottom: 0.7rem; }
+.involve-card img { width: 100px; height: 80px; object-fit: cover; margin-bottom: 10px; }
+.work-card-title {
+  font-weight: 600;
+  font-size: 1.08rem;
+  margin-bottom: 0.2rem;
+}
+
+.involve-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.involve-card {
+  flex: 1 1 230px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(52,154,106,0.05);
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(52,154,106,0.05);
+  padding: 1.5rem;
+  max-width: 420px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.6em 0.9em;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
+.contact-form button {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.7em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 0.5em;
+}
+.contact-form button:hover {
+  background: var(--accent);
+}
+
+/* FOOTER */
+footer {
+  background: #242424;
+  color: #eee;
+  padding: 2.5rem 2% 1.2rem 2%;
+  margin-top: 3rem;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.footer-col {
+  min-width: 180px;
+  flex: 1 1 200px;
+  margin-bottom: 1rem;
+}
+.footer-col h3 {
+  font-size: 1.08rem;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+  letter-spacing: 1px;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-col ul li, .footer-col p {
+  margin-bottom: 0.5rem;
+  font-size: 0.99rem;
+  color: #bbb;
+}
+.footer-newsletter input[type="email"] {
+  padding: 0.5em;
+  width: 80%;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 0.6em;
+  font-size: 1rem;
+}
+.footer-newsletter button {
+  padding: 0.45em 1.3em;
+  font-size: 1rem;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.footer-social {
+  margin-top: 0.6em;
+  display: flex;
+  gap: 1rem;
+}
+.footer-social a span {
+  display: inline-block;
+  color: var(--primary);
+  background: #fff;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  width: 30px; height: 30px;
+  text-align: center; line-height: 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: background 0.2s;
+}
+.footer-social a:hover span {
+  background: var(--accent);
+  color: #fff;
+}
+.footer-note {
+  border-top: 1px solid #414141;
+  color: #888;
+  text-align: center;
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  font-size: 0.97rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  nav {
+    display: none;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .impact-cards, .work-cards, .news-items, .involve-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-actions {
+    right: 10px;
+  }
+}
+@media (max-width: 540px) {
+  .navbar, .footer-container {
+    padding: 0 1%;
+  }
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+  .nav-actions {
+    right: 2px;
+    gap: 4px;
+  }
+}
+
+/* Dummy photo utility class */
+.dummy-photo {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+}
