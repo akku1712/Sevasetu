@@ -70,22 +70,13 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--primary);
   gap: 10px;
 }
 .logo img {
-  height: 48px;
+  height: 72px; /* Enlarged for prominence */
   width: auto;
-  margin-right: 6px;
+  margin-right: 0;
   vertical-align: middle;
-}
-.tagline {
-  font-size: 0.95rem;
-  color: var(--accent);
-  font-weight: 400;
-  margin-top: -4px;
 }
 nav {
   flex: 1;
@@ -105,7 +96,7 @@ nav a:hover {
 }
 
 .hero {
-  background: linear-gradient(rgba(52,154,106,0.13),rgba(253,126,20,0.04)), url('community.png') center/cover;
+  background: linear-gradient(rgba(52,154,106,0.13),rgba(253,126,20,0.04)), url('Community.png') center/cover;
   padding: 4rem 2% 3.5rem 2%;
   text-align: center;
   color: #204f3c;
@@ -163,14 +154,35 @@ section h2 {
   display: block;
   margin-bottom: 0.15em;
 }
-.work-card img,
-.involve-card img,
-.news-card img {
-  border-radius: 8px;
+/* Enlarged feature images */
+.dummy-photo,
+section img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 24px auto 0;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(52,154,106,0.10);
 }
-.work-card img { width: 100px; margin-bottom: 0.6rem; }
-.news-card img { width: 100%; margin-bottom: 0.7rem; }
-.involve-card img { width: 100px; height: 80px; object-fit: cover; margin-bottom: 10px; }
+.work-card img,
+.involve-card img {
+  width: 140px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+.news-card img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .work-card-title {
   font-weight: 600;
   font-size: 1.08rem;
@@ -334,10 +346,4 @@ footer {
     right: 2px;
     gap: 4px;
   }
-}
-
-.dummy-photo {
-  width: 100%;
-  border-radius: 12px;
-  margin-top: 15px;
 }
